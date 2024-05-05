@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js">
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+    </style>
+</head>
+<body>
+    <p>Привет! Получиолось!!!</p>
+    <a href="https://www.ozon.ru/category/supermarket-25000/?miniapp=supermarket"> Test Ozon Link </a>
+    <button onClick="https://www.ozon.ru/category/supermarket-25000/?miniapp=supermarket" type="button">
+        test button</button>
+    <script>
+        const tg = window.Telegram.WebApp;
+        let url = 'ССЫЛКА_НА_YANDEX_FUNCTION';
+        
+        var data = JSON.stringify("https://raw.githubusercontent.com/kichyr/kichyr.github.io/master/README.md");
+
+        tg.MainButton.show();
+        tg.MainButton.setText("Оплатить");
+        tg.MainButton.onClick(() => {
+            console.log("start");
+            tg.openLink("https://www.ozon.ru/product/osvyashchennyy-kulich-panettone-s-apelsinovymi-tsukatami-na-zakvaske-ot-pekarni-ozon-fresh-350-g-1543592930/?avtc=2&avte=1&avts=1714922918&ectx=1&layout_container=pdpPage2column&layout_page_index=2&miniapp=supermarket&sh=xGWNX5gVng&start_page_id=2fa7cef6673c7bd06a1b8a2601178c41")
+            // var xhr = new XMLHttpRequest();
+            // xhr.open("GET", url, true);
+            // xhr.setRequestHeader("Content-Type", "application/json");
+            // xhr.setRequestHeader("X-Custom-Info", "getOpenInvoiceUrl");
+            // xhr.onreadystatechange = function () {
+            //     if (xhr.status === 200) {
+            //         tg.openInvoice(xhr.responseText);
+            //     }
+            // };
+            // xhr.send(data);
+        });
+    </script>
+</body>
+</html>
